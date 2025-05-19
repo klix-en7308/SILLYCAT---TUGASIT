@@ -1,4 +1,9 @@
-on: [push]
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -18,9 +23,12 @@ jobs:
       
       - name: Build project
         run: npm run build-cloudflare
-      
-      - name: Deploy project
-        run: npm run deploy-cloudflare -- --branch ${{ github.ref_name }}
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.c82fb0ea236e48ef332366f8fb96b57376eac }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.9696a68c5dd30f3184b4694f45847492 }}
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.c82fb0ea236e48ef332366f8fb96b57376eac }}
