@@ -1,0 +1,6 @@
+name = "it-project"
+
+pages_build_output_dir = "."
+
+[env.production]
+name = "it-project"
