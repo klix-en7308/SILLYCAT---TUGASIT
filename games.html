@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="tabnav">
+        <div class="tablink">
+            <button class="mainbtns" id="firstopen" onclick="openTab(event, 'Revolver')"></button>
+            <i class="fas fa-compact-disc diccs"></i>
+        </div>
+        <div class="tablink">
+            <button class="mainbtns" onclick="openTab(event, 'Haunted')"></button>
+            <i class="fas fa-compact-disc diccs"></i>
+        </div>
+        <div class="tablink">
+            <button class="mainbtns" onclick="openTab(event, 'Nyanko')"></button>
+            <i class="fas fa-compact-disc diccs"></i>
+        </div>
+    </div>
+    <div class="hellyeah">
+    <div id="Revolver" class="tabcontent">
+        <div class="bg">
+            <div class="flexer rr">
+                <div class="disc">
+                    <img class="slow-spin" src="src/assets/disc.png">
+                </div>
+                <div class="erminfo">
+                    <h2 class="title">PARALLEL REVOLVER</h2>
+                    <div class="flexer">
+                        <div class="tags">upcoming</div>
+                        <div class="tags">upcoming</div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam ipsa laborum odit quaerat accusamus eveniet. Amet aliquam asperiores inventore reprehenderit, repudiandae odit rem! Ab maiores explicabo praesentium eaque voluptatum?</p>
+                    <a>MORE INFO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Haunted" class="tabcontent">
+        <div class="bg">
+            <div class="flexer rr">
+                <div class="disc">
+                    <img class="slow-spin" src="src/assets/disc.png">
+                </div>
+                <div class="erminfo">
+                    <h2 class="title">HAUNTED</h2>
+                    <div class="flexer">
+                        <div class="tags">drama</div>
+                        <div class="tags">visual novel</div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam ipsa laborum odit quaerat accusamus eveniet. Amet aliquam asperiores inventore reprehenderit, repudiandae odit rem! Ab maiores explicabo praesentium eaque voluptatum?</p>
+                    <a>MORE INFO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Nyanko" class="tabcontent">
+        <div class="bg">
+            <div class="flexer rr">
+                <div class="disc">
+                    <img class="slow-spin" src="src/assets/disc.png">
+                </div>
+                <div class="erminfo">
+                    <h2 class="title">NYANKO MATH</h2>
+                    <div class="flexer">
+                        <div class="tags">cats!!</div>
+                        <div class="tags">math</div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam ipsa laborum odit quaerat accusamus eveniet. Amet aliquam asperiores inventore reprehenderit, repudiandae odit rem! Ab maiores explicabo praesentium eaque voluptatum?</p>
+                    <a>MORE INFO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("firstopen").click();
+        function openTab(evt, cityName) {
+    console.log(cityName)
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+    </script>
+    <script type="module" src="/src/games.js"></script>
+</body>
+</html>

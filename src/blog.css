@@ -1,0 +1,55 @@
+body{
+    background-color: #03191e;
+    padding: 0
+}
+.big{
+    background-color: #03191e;
+    width: 100vw;
+}
+.new{
+    width: 100vw;
+}
+.woah{
+    height: 100vh;
+    background-color: #38b6ff;
+    width: 30%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 30px;
+    
+}
+.woah h2{
+    font-size: 80px;
+    letter-spacing: 1px;
+}
+.blogs{
+    
+    height: 100%;
+    padding: 20px;
+}
+.yayay{
+    background-color: #523249;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.yayay:hover{
+    cursor: pointer;
+}
+.leftinfo{
+    color: white;
+}
+.leftinfo h2{
+font-size: 40px;
+}
+.date{
+    margin-top: -10px;
+    color: #98d957;
+    
+}
+.theactualthing{
+    color: white;
+    text-align: justify;
+    max-width: 100%;
+}

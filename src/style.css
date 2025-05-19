@@ -1,0 +1,312 @@
+#mainbody{
+  height: 2000px;
+  width: 100vw;
+  background-color: #03191e;
+  margin: -10px;
+}
+
+body{
+  overflow-x: hidden;
+  padding: 0;
+}
+
+h2{
+  font-family: 'Passion One';
+}
+p{
+  font-family: 'DM Sans';
+}
+#header{
+  height: 100vh;
+}
+#header img{
+  max-width: 800px;
+  margin-top: 30px;
+}
+#games{
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  overflow: hidden;
+}
+.gamecontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffcf8;
+  height: 100vh;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featuredcar{
+  width: 1000px;
+  margin-left: 200px;
+}
+#featuredcar{
+  opacity: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.featuredimg{
+  background-image: url('https://metaphor.atlus.com/media/img/media/trailer_thumb_01.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+.flexer{
+  display: flex;
+  flex-direction: row;
+}
+.featuredleft{
+  background-color: #815355;
+  width: 70%;
+  padding: 10px 30px;
+  color: #fffcf8;
+}
+.featuredleft h2{
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+.featuredright{
+  background-color: #98d957;
+  flex-grow: 1;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #523249;
+  transition: 0.5s;
+}
+.featuredleft p{
+  margin-top: -40px;
+  font-size: 17px;
+}
+.mainabout{
+  width: 50%;
+  display: flex;
+  align-items: end;
+}
+.headcard{
+  padding: 20px;
+  color: #fffcf8;
+  background-color: #38b6ff;
+}
+.aboutus{
+  margin-top: 6000px;
+}
+#aboutus{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03191e;
+}
+#contact{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03191e;
+}
+.yes{
+  width: 1000px;
+  
+  margin-left: 200px;
+}
+.subcard{
+  background-color: #523249;
+  padding: 30px;
+  text-align: justify;
+  color: #fffcf8;
+}
+.headcard{
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-align: right;
+  padding-right: 30px ;
+  border-top-left-radius : 20px;
+}
+.new{
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-bottom: -10px;
+}
+.frontcard{
+  background-color: #98d957;
+  height: 550px;
+  width: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  display: flex;
+  align-items: end;
+}
+.backcard{
+  background-color: #523249;
+  height: 550px;
+  margin-top: -550px;
+  width: 100%;
+  z-index: -1;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+.oo{
+  width: 50%;
+  padding: 10px;
+}
+.move{
+  margin-left: 400px;
+}
+.contactus{
+  color: #fffcf8;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.contacticon{
+  color: #fffcf8;
+  font-size: 35px;
+}
+.contactbar{
+  margin-top: -25px;
+  letter-spacing: 10px;
+}
+.contacthmm{
+  color: #fffcf8;
+  font-size: 25px;
+}
+.formbox{
+  background-color: #523249;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.formthing{
+  background-color: #815355;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  font-family: 'DM Sans';
+  font-size: 15px;
+  color: #fffcf8;
+}
+.formthing::placeholder{
+  color: #523249
+}
+.formthing:focus{
+  outline: none;
+}
+.contactright{
+  width: 50%
+}
+.bawah{
+  margin-top: 10px;
+  height: 100px
+}
+.submitt{
+  margin-top: 10px;
+  background-color: #98d957;
+  border: none;
+  border-radius: 10px;
+  color:#815355;
+  transition: 0.5s;
+}
+.center i{
+  color: #fffcf8;
+  font-size:40px;
+}
+.name h2{
+  font-size: 30px;
+  color: #523249;
+}
+.aboutinfo{
+  color:#815355;
+  margin-top: -10px;
+  font-size: 15px;
+}
+.navbar{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  padding: 20px;
+  width: 200px;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar img{
+  height: 60px;
+}
+.navbar a{
+  font-size: 50px;
+  color: #38b6ff;
+  transition: 0.5s;
+}
+.navbar a:hover{
+  font-size: 60px;
+}
+html{
+  scroll-behavior: smooth;
+}
+ 
+.featuredright:hover, .submitt:hover {
+  box-shadow: inset 600px 0 0 0 #5d8535;
+  color:#815355;
+}
+a{
+  cursor: pointer
+}
+
+
+@media only screen and (max-width: 600px) {
+  #header{width: 100vw}
+  #header img{width: 80%}
+  .navbar{
+    width: 30px
+  }
+  .navbar a{
+    font-size: 30px;
+  }
+  h2, .featuredcar h2{
+    font-size: 30px;
+  }
+  .featuredcar, .yes{
+    margin-left: 70px;
+    margin-right: 20px;
+  }
+  .featuredleft{
+    width: 100%
+  }
+  .featuredleft p{
+    margin-top: 10px;
+  }
+  p, .featuredcar p{
+    font-size: 12px
+  }
+  .flexer{
+    flex-direction: column;
+  }
+  .frontcard, .backcard{
+    height: 70px
+  }
+  .backcard{
+    margin-top: -70px;
+  }
+  .oo, .mainabout{
+    width: 100%;
+  }
+  .contactright{
+    width: 100%;
+  }
+}
