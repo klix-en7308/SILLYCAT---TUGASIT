@@ -3,12 +3,12 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
-import { gsap } from "./node_modules/gsap";
+import { gsap } from "gsap";
     
-import { ScrollTrigger } from "./node_modules/gsap/ScrollTrigger";
+import { ScrollTrigger } from "./gsap/ScrollTrigger";
 // ScrollSmoother requires ScrollTrigger
-import { ScrollSmoother } from "./node_modules/gsap/ScrollSmoother";
-import { ScrollToPlugin } from "./node_modules/gsap/ScrollToPlugin";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 
 gsap.registerPlugin(ScrollTrigger,ScrollSmoother,ScrollToPlugin);
