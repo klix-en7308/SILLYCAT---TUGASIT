@@ -156,8 +156,7 @@ let newtl = gsap.timeline({
       trigger: '#startnav',// pin the trigger element while active
       start: 'top-=20% top', // when the top of the trigger hits the top of the viewport
       end: 'end end', // end after scrolling 500px beyond the start
-      scrub: true,
-      markers: true
+      scrub: true
   }
 });
 newtl.from(".navbar",{opacity: 0});
