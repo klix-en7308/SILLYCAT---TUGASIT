@@ -107,7 +107,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       </div>
     </div>
     </div>
-    <script type="module" src="./src/main.js"></script>
-    
+    <!-- <script type="module" src="/src/main.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script>
+      const maxheight = document.documentElement.clientHeight
+const maxwidth = document.documentElement.clientWidth
+
+let panels = gsap.utils.toArray(".panel");
+panels.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+    pin: true, 
+    pinSpacing: false 
+  });
+});
+
+
+gsap.utils.toArray(".oo").forEach(function(card) {
+  gsap.set(card, {
+    transformStyle: "preserve-3d",
+    transformPerspective: 1000
+  });
+  const q = gsap.utils.selector(card);
+  const front = q("#backcard");
+  const back = q("#frontcard");
+  
+  gsap.set(back, { rotationY:-180 });
+  
+  const tl = gsap.timeline({ paused: true })
+    .to(front, { duration: 1, rotationY: 180 })
+    .to(back, { duration: 1, rotationY: 0 }, 0)
+    .to(card, { z: 50 }, 0)
+    .to(card, { z: 0 }, 0.5);
+  card.addEventListener("mouseenter", function() {
+    tl.play();
+  });
+  card.addEventListener("mouseleave", function() {
+    tl.reverse();
+  });
+});
+
+let newtl = gsap.timeline({
+  // yes, we can add it to an entire timeline!
+  scrollTrigger: {
+      trigger: '#startnav',// pin the trigger element while active
+      start: 'top-=20% top', // when the top of the trigger hits the top of the viewport
+      end: 'end end', // end after scrolling 500px beyond the start
+      scrub: true,
+      markers: true
+  }
+});
+newtl.from(".navbar",{opacity: 0});
+    </script>
   </body>
 </html>
