@@ -12,6 +12,7 @@ body{
 
 h2{
   font-family: 'Passion One';
+  font-size: 2.5rem;
 }
 p{
   font-family: 'DM Sans';
@@ -68,7 +69,6 @@ p{
   color: #fffcf8;
 }
 .featuredleft h2{
-  font-size: 50px;
   letter-spacing: 1px;
 }
 .featuredright{
@@ -82,7 +82,7 @@ p{
 }
 .featuredleft p{
   margin-top: -40px;
-  font-size: 17px;
+  font-size: 1rem;
 }
 .mainabout{
   width: 50%;
@@ -123,9 +123,11 @@ p{
   padding: 30px;
   text-align: justify;
   color: #fffcf8;
+  font-size: 1rem;
 }
 .headcard{
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 1.5em;
   letter-spacing: 1px;
   text-align: right;
   padding-right: 30px ;
