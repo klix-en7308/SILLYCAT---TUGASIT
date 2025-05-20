@@ -59,7 +59,7 @@ p{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 450px;
+  height: calc(0.6 * 100vh);
 }
 .flexer{
   display: flex;
@@ -264,6 +264,7 @@ p{
 html{
   scroll-behavior: smooth;
 }
+
  
 .featuredright:hover, .submitt:hover {
   box-shadow: inset 600px 0 0 0 #5d8535;

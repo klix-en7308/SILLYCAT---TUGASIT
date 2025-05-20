@@ -16,16 +16,16 @@
 <body>
     <div class="tabnav">
         <div class="tablink">
-            <button class="mainbtns" id="firstopen" onclick="openTab(event, 'Revolver')"></button>
-            <i class="fas fa-compact-disc diccs"></i>
+            <button class="mainbtns" id="firstopen" onclick="openTab(event, 'Revolver')" style="background-image: url(/src/assets/revolvercover.png);"></button>
+            <img src="/src/assets/revolverdisc.png" class="diccs">
         </div>
         <div class="tablink">
-            <button class="mainbtns" onclick="openTab(event, 'Haunted')"></button>
-            <i class="fas fa-compact-disc diccs"></i>
+            <button class="mainbtns" onclick="openTab(event, 'Haunted')" style="background-image: url(/src/assets/hauntedcover.png);"></button>
+            <img src="/src/assets/haunteddisc.png" class="diccs">
         </div>
         <div class="tablink">
-            <button class="mainbtns" onclick="openTab(event, 'Nyanko')"></button>
-            <i class="fas fa-compact-disc diccs"></i>
+            <button class="mainbtns" onclick="openTab(event, 'Nyanko')" style="background-image: url(/src/assets/nyankocover.png);"></button>
+            <img src="/src/assets/nyankodisc.png" class="diccs">
         </div>
     </div>
     <div class="hellyeah">
@@ -33,52 +33,64 @@
         <div class="bg">
             <div class="flexer rr">
                 <div class="disc">
-                    <img class="slow-spin" src="src/assets/disc.png">
+                    <img class="slow-spin" src="src/assets/revolverdisc.png">
                 </div>
                 <div class="erminfo">
+                    <a href="index.html" class="specialbtn" style="background: none;
+    border: 2px solid #98d957; color: #98d957; width: 20%"><i class="fas fa-chevron-left"></i> BACK</a>
                     <h2 class="title">PARALLEL REVOLVER</h2>
                     <div class="flexer yeaa">
                         <div class="tags">upcoming</div>
                         <div class="tags">upcoming</div>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam ipsa laborum odit quaerat accusamus eveniet. Amet aliquam asperiores inventore reprehenderit, repudiandae odit rem! Ab maiores explicabo praesentium eaque voluptatum?</p>
-                    <a>MORE INFO</a>
+                    <a>COMING SOON!</a>
                 </div>
             </div>
         </div>
     </div>
     <div id="Haunted" class="tabcontent">
-        <div class="bg">
+        <div class="bg" style="background: 
+    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.68) 30%, rgba(0, 0, 0, 1) 100%),
+    url('https://i.pinimg.com/736x/07/c5/88/07c5885b088739e070402d4d6a74f885.jpg') no-repeat center;
+    background-size: cover;">
             <div class="flexer rr">
                 <div class="disc">
-                    <img class="slow-spin" src="src/assets/disc.png">
+                    <img class="slow-spin" src="src/assets/haunteddisc.png">
                 </div>
                 <div class="erminfo">
+                    <a href="index.html" class="specialbtn" style="background: none;
+    border: 2px solid #98d957; color: #98d957; width: 20%"><i class="fas fa-chevron-left"></i> BACK</a>
                     <h2 class="title">HAUNTED</h2>
                     <div class="flexer">
                         <div class="tags">drama</div>
                         <div class="tags">visual novel</div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam ipsa laborum odit quaerat accusamus eveniet. Amet aliquam asperiores inventore reprehenderit, repudiandae odit rem! Ab maiores explicabo praesentium eaque voluptatum?</p>
-                    <a>MORE INFO</a>
+                    <p>Popular High School student, Farlan Arkenzis investigates an old classroom filled with hidden memories to find the spirit that's been terrorizing his friend group. An encounter with a betrayed friend and unexpected circumstances was not what he expected.</p>
+                    <a href="https://klixen.itch.io/haunted-unvoiced?secret=8LNT7thw56HJHyIfbchGIPyFQ" target="_blank">MORE INFO</a>
                 </div>
             </div>
         </div>
     </div>
     <div id="Nyanko" class="tabcontent">
-        <div class="bg">
+        <div class="bg" style="background: 
+    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.68) 30%, rgba(0, 0, 0, 1) 100%),
+    url('/src/assets/nyankobg.png') no-repeat center;
+    background-size: cover;">
             <div class="flexer rr">
                 <div class="disc">
-                    <img class="slow-spin" src="src/assets/disc.png">
+                    <img class="slow-spin" src="src/assets/nyankodisc.png">
                 </div>
                 <div class="erminfo">
+                    <a href="index.html" class="specialbtn" style="background: none;
+    border: 2px solid #98d957; color: #98d957; width: 20%"><i class="fas fa-chevron-left"></i> BACK</a>
                     <h2 class="title">NYANKO MATH</h2>
                     <div class="flexer">
                         <div class="tags">cats!!</div>
                         <div class="tags">math</div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam ipsa laborum odit quaerat accusamus eveniet. Amet aliquam asperiores inventore reprehenderit, repudiandae odit rem! Ab maiores explicabo praesentium eaque voluptatum?</p>
-                    <a>MORE INFO</a>
+                    <p>Live your life as different cats, seeking adventure to vanquish evil monsters from the cat realm! Use your mathematic skills to accomplish incredible feats and defeat the baddest bad guys!!!</p>
+                    <a target="_blanl" href="https://scratch.mit.edu/projects/903987696/">MORE INFO</a>
                 </div>
             </div>
         </div>
@@ -119,7 +131,7 @@
     
     
     const tl = gsap.timeline({ paused: true })
-      .to(back, {marginLeft: -180});
+      .to(back, {marginLeft: -150});
       
     disc.addEventListener("mouseenter", function() {
       tl.play();

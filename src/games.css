@@ -24,7 +24,9 @@ body{
     background-color: #38b6ff;
     position: relative;
     right: 0;
-   
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
     cursor: pointer;
     
     
@@ -33,7 +35,8 @@ body{
     margin-left: -170px;
 } */
 .diccs{
-    font-size: 90px;
+    height: 90px;
+    width: 90px;
     color:#fffcf8;
     margin-left: -100px;
     z-index: -50;
@@ -54,10 +57,7 @@ body{
 .bg{
     height: 100%;
     width: 100%;
-    background: 
-    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.68) 30%, rgba(0, 0, 0, 1) 100%),
-    url('https://play-lh.googleusercontent.com/BYQbWM3UyrM410jYeknAJsgNynXq3x3XyFZKqZk8SLpbBoM4zIGC8UF5rmid_cOqAg=w526-h296-rw') no-repeat center;
-    background-size: cover;
+    
 }
 .tabcontent{
     display: none;
@@ -88,7 +88,7 @@ h2{
 }
 
 .tags{
-    background-color: #98d957;
+    background-color: #38b6ff;
     padding: 6px;
     border-radius: 20px;
     color: #fffcf8;
@@ -98,6 +98,10 @@ h2{
 }
 p{
     color: #fffcf8;
+}
+.specialbtn{
+    background: none;
+    border: 2px solid #98d957;
 }
 .erminfo a{
     margin-top: 10px;
