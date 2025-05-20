@@ -11,7 +11,6 @@ body{
     position: fixed;
     right: 0;
     top: 0;
-    margin-top: 100px;
     z-index: 100;
 }
 .tablink{
@@ -129,3 +128,24 @@ p{
     -webkit-animation: fa-spin 6s infinite linear;
     animation: fa-spin 6s infinite linear;
   }
+
+@media only screen and (max-width: 600px) {
+    .disc{
+        margin: auto;
+        margin-top: -200px;
+    }
+    .tabnav{
+        top: calc(100vh);
+        left: 0;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        transform: rotate(90deg)
+    }
+    .erminfo{
+        width: 90%
+    }
+    .yeaa{
+        flex-direction: row;
+    }
+}

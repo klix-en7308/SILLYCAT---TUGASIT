@@ -43,8 +43,8 @@ blogs.forEach((blog)=>{
                 <p class="date">${blog.date}</p>
                 </div>
                 <div class="rightbtn">
-                <a class="btn btn-primary" data-bs-toggle="collapse" href="#blog-${blog.id}" role="button" aria-expanded="false" aria-controls="blog-${blog.id}">
-    Link with href
+                <a class="yesbtn" data-bs-toggle="collapse" href="#blog-${blog.id}" role="button" aria-expanded="false" aria-controls="blog-${blog.id}">
+    <i class="fas fa-chevron-down"></i>
   </a>
   
                 </div>
@@ -60,7 +60,7 @@ blogs.forEach((blog)=>{
 
 gsap.utils.toArray(".yayay").forEach(function(blog) {
     const q = gsap.utils.selector(blog);
-    const btn = q(".btn");
+    const btn = q(".yesbtn");
     const content = q(".theactualthing")
     
     
