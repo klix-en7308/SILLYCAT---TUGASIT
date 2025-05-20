@@ -31,11 +31,11 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.c82fb0ea236e48ef332366f8fb96b57376eac }}
-      # - name: Publish
-      #   uses: cloudflare/pages-action@v1
-      #   with:
-      #     apiToken: ${{ secrets.c82fb0ea236e48ef332366f8fb96b57376eac }}
-      #     accountId: ${{ secrets.9696a68c5dd30f3184b4694f45847492 }}
-      #     projectName: 'sillycat---tugasit' # e.g. 'my-project'
-      #     directory: 'dist' # e.g. 'dist'
-      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.c82fb0ea236e48ef332366f8fb96b57376eac }}
+          accountId: ${{ secrets.9696a68c5dd30f3184b4694f45847492 }}
+          projectName: 'sillycat---tugasit' # e.g. 'my-project'
+          directory: 'dist' # e.g. 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
