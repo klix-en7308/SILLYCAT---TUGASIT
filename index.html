@@ -103,8 +103,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             </div>
             <p class="contacthmm">Got anything to say?</p>
             <form id="formbox" class="formbox" method="POST" action="https://script.google.com/macros/s/AKfycbzpBvkBJDXGIkn8Agxjh6nrvtQEFKIk6ZtAGfUvgL3sdwcHqkznrSW6Qv7nQpxFr0KQWw/exec">
-              <input name="Name" type="text" class="formthing" placeholder="name...">
-              <textarea name="Suggestion" type="text" class="formthing bawah" placeholder="any suggestions?"></textarea>
+              <input name="Name" id="name" type="text" class="formthing" placeholder="name...">
+              <textarea name="Suggestion" id="lol" type="text" class="formthing bawah" placeholder="any suggestions?"></textarea>
               <button type="submit" class="submitt btn" data-toggle="modal" data-target="#exampleModal"><h2>SUBMIT</h2></button>
             </form>
           </div>
@@ -120,6 +120,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   const form = document.getElementById('formbox');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
+   
     const data = new FormData(form);
     const action = e.target.action;
     fetch(action, {
@@ -129,6 +130,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     .then(() => {
       alert("Success!");
     })
+     document.getElementById("formbox").reset();
   });
 });
       gsap.registerPlugin(ScrollTrigger);
