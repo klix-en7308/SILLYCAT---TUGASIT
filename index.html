@@ -102,9 +102,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
               <a class="contacticon"><i class="fab fa-x-twitter"></i></a>
             </div>
             <p class="contacthmm">Got anything to say?</p>
-            <form class="formbox">
-              <input type="text" class="formthing" placeholder="name...">
-              <textarea type="text" class="formthing bawah" placeholder="any suggestions?"></textarea>
+            <form id="formbox" class="formbox" method="POST" action="https://script.google.com/macros/s/AKfycbzpBvkBJDXGIkn8Agxjh6nrvtQEFKIk6ZtAGfUvgL3sdwcHqkznrSW6Qv7nQpxFr0KQWw/exec">
+              <input name="Name" type="text" class="formthing" placeholder="name...">
+              <textarea name="Suggestion" type="text" class="formthing bawah" placeholder="any suggestions?"></textarea>
               <button type="submit" class="submitt"><h2>SUBMIT</h2></button>
             </form>
           </div>
@@ -116,6 +116,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script>
+      window.addEventListener("load", function() {
+  const form = document.getElementById('formbox');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Success!");
+    })
+  });
+});
       gsap.registerPlugin(ScrollTrigger);
       const maxheight = document.documentElement.clientHeight
 const maxwidth = document.documentElement.clientWidth
