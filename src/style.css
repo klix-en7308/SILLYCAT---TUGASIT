@@ -1,6 +1,10 @@
 *{
   position: relative;
 }
+@view-transition {
+  navigation: auto;
+}
+
 #mainbody{
   height: 2000px;
   width: 100vw;
